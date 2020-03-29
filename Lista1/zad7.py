@@ -10,10 +10,10 @@ def matcher(pattern, list):
     for i in range(0, len(pattern)):
         if pattern[i].isalpha():
             dict[i] = pattern[i]
-            
+    print(dict)        
     for word in list:
         for indeks in dict:
-            if word[indeks] != pattern[indeks]:
+            if word[indeks] != dict[indeks]:
                 break
         else:
             result.append(word)
